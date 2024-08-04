@@ -16,7 +16,7 @@ describe("EtherGame", function () {
   }
 
   describe("Attack", function () {
-    it.only("Attack the vulnerable EtherGame contract.", async function () {
+    it("Attack the vulnerable EtherGame contract.", async function () {
       const { etherGame, etherGameAttack, deployer, victim, attacker } = await loadFixture(deployFixture);
 
       // Deposit ether
