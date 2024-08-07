@@ -18,7 +18,7 @@ describe("KingOfEther", function () {
   }
 
   describe("Attack", function () {
-    it.only("should allow players to claim the throne and then block new claims", async function () {
+    it("should allow players to claim the throne and then block new claims", async function () {
       const { kingOfEther, kingAttack, deployer, alice, bob, eve } = await loadFixture(deployFixture);
 
       // Alice claims the throne by sending 1 Ether
