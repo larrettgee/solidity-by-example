@@ -18,7 +18,7 @@ describe("GuessTheRandomNumber", function () {
   }
 
   describe("Attack", function () {
-    it.only("should guess the random number and win 1 Ether", async function () {
+    it("should guess the random number and win 1 Ether", async function () {
       const { guessTheRandomNumber, attack, eve } = await loadFixture(deployFixture);
 
       // Initial balance of Attack contract should be 0
