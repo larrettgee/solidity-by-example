@@ -13,7 +13,7 @@ describe("Vault (Private Data)", function () {
   }
 
   describe("Check Values", function () {
-    it.only("Extract all the private data!", async function () {
+    it("Extract all the private data!", async function () {
       const { vault, user2 } = await loadFixture(deployFixture);
 
       // slot 0 - count
