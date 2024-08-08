@@ -17,7 +17,7 @@ describe("Target", function () {
     return { target, failedAttack, deployer, user, attacker };
   }
 
-  describe.only("Protected Function", function () {
+  describe("Protected Function", function () {
     it("should prevent contracts from calling the protected function", async function () {
       const { target, failedAttack, attacker } = await loadFixture(deployFixture);
 
