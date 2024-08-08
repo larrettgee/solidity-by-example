@@ -44,7 +44,7 @@ describe("BadMultiSigWallet", function () {
       expect(await ethers.provider.getBalance(await wallet.getAddress())).to.equal(ethers.parseEther("8"));
     });
 
-    it.only("Should stop reuse of transactions", async function () {
+    it("Should stop reuse of transactions", async function () {
       const { goodWallet: wallet, owner1, owner2, user } = await loadFixture(deployFixture);
 
       // Deposit ether
