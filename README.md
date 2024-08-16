@@ -1,16 +1,66 @@
-# Solidity By Example
+## Foundry
 
-A hardhat representation of some of the [Solidity By Example](https://solidity-by-example.org/) documentation, with corresponding tests to see the functionality come to life.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Some helpful functions:
+Foundry consists of:
+
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
 
 ```shell
-yarn
-npx hardhat compile
-npx hardhat test
+$ forge build
 ```
 
-## Notes
+### Test
 
-- If you want to run only a specific test, either define it in the command line or add `.only` to `it()`.
-- `TimeLock.sol` doesn't have tests since it uses an older version of solidity.
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```

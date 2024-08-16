@@ -8,6 +8,8 @@ interface IUniswapV2Router {
         address to,
         uint deadline
     ) external payable returns (uint[] memory amounts);
+
+    function WETH() external pure returns (address);
 }
 
 contract MarketManipulator {
@@ -36,31 +38,31 @@ contract MarketManipulator {
     }
 }
 
-contract OracleAttack {
-    IDeFiTradingPlatform public tradingPlatform;
-    IOracle public priceOracle;
-    IDeFiLendingPlatform public lendingPlatform;
-    MarketManipulator public marketManipulator;
+// contract OracleAttack {
+//     IDeFiTradingPlatform public tradingPlatform;
+//     IOracle public priceOracle;
+//     IDeFiLendingPlatform public lendingPlatform;
+//     MarketManipulator public marketManipulator;
 
-    constructor(address _tradingPlatform, address _priceOracle, address _lendingPlatform) {
-        tradingPlatform = IDeFiTradingPlatform(_tradingPlatform);
-        priceOracle = IOracle(_priceOracle);
-        lendingPlatform = IDeFiLendingPlatform(_lendingPlatform);
-    }
+//     constructor(address _tradingPlatform, address _priceOracle, address _lendingPlatform) {
+//         tradingPlatform = IDeFiTradingPlatform(_tradingPlatform);
+//         priceOracle = IOracle(_priceOracle);
+//         lendingPlatform = IDeFiLendingPlatform(_lendingPlatform);
+//     }
 
-    function manipulateMarket() external {
-        // This function would use the trading platform to buy up a token and manipulate the market
-        marketManipulator.manipulateMarket();
-    }
+//     function manipulateMarket() external {
+//         // This function would use the trading platform to buy up a token and manipulate the market
+//         marketManipulator.manipulateMarket();
+//     }
 
-    function exploitOracle() external {
-        // This function would then use the manipulated price from the oracle to take out loans
-        uint256 manipulatedPrice = priceOracle.getPriceOfToken();
-        lendingPlatform.borrowFunds(manipulatedPrice);
-    }
+//     function exploitOracle() external {
+//         // This function would then use the manipulated price from the oracle to take out loans
+//         uint256 manipulatedPrice = priceOracle.getPriceOfToken();
+//         lendingPlatform.borrowFunds(manipulatedPrice);
+//     }
 
-    function withdrawFunds() external {
-        // This function would withdraw the borrowed funds to the attacker's wallet
-        lendingPlatform.withdrawBorrowedFunds();
-    }
-}
+//     function withdrawFunds() external {
+//         // This function would withdraw the borrowed funds to the attacker's wallet
+//         lendingPlatform.withdrawBorrowedFunds();
+//     }
+// }
