@@ -15,6 +15,6 @@ seed = '0x2'
 # fail_on_revert = we only care about the assertion, not the reverted txs
 [invariant]
 runs = 1000
-fail_on_revert = false
+fail_on_revert = true
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
