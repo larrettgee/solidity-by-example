@@ -1,66 +1,96 @@
-## Foundry
+# Solidity By Example - Interactive Learning
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Welcome to this educational repository that complements [solidity-by-example.org](https://solidity-by-example.org)! This repository provides hands-on examples with Foundry testing to help you learn Solidity through practical experience.
 
-Foundry consists of:
+## 🎯 Purpose
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This repository aims to:
+- Provide practical, runnable examples of Solidity concepts
+- Demonstrate best practices through comprehensive tests
+- Help you understand Solidity patterns through interactive learning
 
-## Documentation
+## 📚 Examples Structure
 
-https://book.getfoundry.sh/
+Each example in this repository follows this structure:
+1. A Solidity contract demonstrating a concept
+2. Comprehensive tests showing different use cases
+3. Comments explaining key concepts and potential pitfalls
 
-## Usage
+## 🚀 Getting Started
 
-### Build
+### Prerequisites
 
-```shell
-$ forge build
+1. Install Foundry:
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
 ```
 
-### Test
-
-```shell
-$ forge test
+2. Clone this repository:
+```bash
+git clone https://github.com/larrettgee/solidity-by-example.git
+cd solidity-by-example
 ```
 
-### Format
-
-```shell
-$ forge fmt
+3. Install dependencies:
+```bash
+forge install
 ```
 
-### Gas Snapshots
+### Running the Examples
 
-```shell
-$ forge snapshot
+1. Build all contracts:
+```bash
+forge build
 ```
 
-### Anvil
-
-```shell
-$ anvil
+2. Run all tests:
+```bash
+forge test
 ```
 
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+3. Run tests for a specific example:
+```bash
+forge test --match-contract ExampleContractTest
 ```
 
-### Cast
+## 📖 Available Examples
 
-```shell
-$ cast <subcommand>
-```
+- Basic Concepts
+  - Variables and Types
+  - Functions
+  - Control Flow
+- Intermediate Concepts
+  - Events and Logging
+  - Error Handling
+  - Inheritance
+- Advanced Concepts
+  - Assembly
+  - Storage Patterns
+  - Gas Optimization
 
-### Help
+## 🛠 Development Tools
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This project uses Foundry, which includes:
+- **Forge**: Testing framework
+- **Cast**: Chain interaction tool
+- **Anvil**: Local testnet node
+- **Chisel**: Solidity REPL
+
+For detailed documentation on Foundry, visit [book.getfoundry.sh](https://book.getfoundry.sh/)
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have an example you'd like to add:
+1. Fork the repository
+2. Create a new branch for your example
+3. Add your contract and tests
+4. Submit a PR with a clear description of what your example teaches
+
+## 📝 License
+
+This project is licensed under MIT - see the LICENSE file for details
+
+---
+
+Happy learning! If you find this helpful, please give it a ⭐️
